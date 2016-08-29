@@ -58,11 +58,11 @@ WindowsToaster.prototype.notify = function (options, callback) {
   }
 
   options = utils.mapToWin8(options);
-  var argsList = utils.constructArgumentList(options, {
-    wrapper: '',
-    noEscape: true
-  });
+  // var argsList = utils.constructArgumentList(options, {
+  //   wrapper: '',
+  //   noEscape: true
+  // });
   // utils.fileCommand(this.options.customPath || notifier, argsList, actionJackedCallback);
-  utils.fileCommandForWin(this.options.customPath || notifier ,argsList,actionJackedCallback);
+  utils.fileCommandForWin(this.options.customPath || notifier ,options,actionJackedCallback);
   return this;
 };
